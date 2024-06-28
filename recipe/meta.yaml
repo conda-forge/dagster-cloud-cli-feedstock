@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - dagster ==1.7.10
+    - dagster =={{ version }}
     - packaging >=20.9
     - questionary
     - requests
