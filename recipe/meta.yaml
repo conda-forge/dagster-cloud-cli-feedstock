@@ -28,7 +28,7 @@ requirements:
     - pytest
     - typing_extensions
     - python >=3.8
-    - dagster ==1.8.11
+    - dagster =={{ version }}
     - packaging >=20.9
     - questionary
     - requests
