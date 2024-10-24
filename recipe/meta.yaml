@@ -1,5 +1,5 @@
 {% set name = "dagster-cloud-cli" %}
-{% set version = "1.8.12" %}
+{% set version = "1.8.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dagster-cloud-cli-{{ version }}.tar.gz
-  sha256: dbace4cec3b248962bd18c0ddead3697aa8797b1576b254f25016bc4d3ad3cde
+  sha256: b0620c760f56573c7be59e2c29fa335ca306a3e689bf807b9e20a960be432d76
 
 build:
   entry_points:
@@ -28,7 +28,7 @@ requirements:
     - pytest
     - typing_extensions
     - python >=3.8
-    - dagster =={{ version }}
+    - dagster ==1.8.13
     - packaging >=20.9
     - questionary
     - requests
