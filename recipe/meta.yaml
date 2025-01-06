@@ -19,7 +19,7 @@ build:
     - dagster-cloud = dagster_cloud_cli.entrypoint:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -50,6 +50,7 @@ test:
     - dagster-cloud --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   license: Apache-2.0
