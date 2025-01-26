@@ -8,8 +8,10 @@
 {% set min_python = "python >=3.8,<3.13" %}
 {% set min_python = "python >=3.8,<3.13" %}
 {% set min_python = "python >=3.8,<3.13" %}
+{% set min_python = "python >=3.8,<3.13" %}
+{% set min_python = "python >=3.8,<3.13" %}
 {% set name = "dagster-cloud-cli" %}
-{% set version = "1.9.9" %}
+{% set version = "1.9.10" %}
 {% set min_python = "python >=3.8,<3.13" %}
 
 package:
@@ -18,7 +20,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3b4222cab6a8d54e2fa7dffc5b6e9859987eaf89248f7b3708d8d16f6c4e537e
+  sha256: b733b805a6b60dac780cdbab76363a6352aab58eaccd5aa5869c80529c29f01e
 
 build:
   entry_points:
@@ -39,7 +41,7 @@ requirements:
     - pytest
     - typing_extensions
     - {{ min_python }}
-    - dagster ==1.9.9
+    - dagster ==1.9.10
     - packaging >=20.9
     - questionary
     - requests
