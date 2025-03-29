@@ -3,7 +3,8 @@ schema_version: 1
 context:
   python_min: 3.9
   name: dagster-cloud-cli
-  version: 1.10.6
+  version: 1.10.7
+  dagster_library_version: 0.26.7
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +12,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 4a0183b5cfab49bd2a96580ec0f53f934544d245f2fc8368f87b8d714c5f65ec
+  sha256: f11ef445ab0583835afb6f2d9d8fc5fb0768c6970a8b182bdac7c513fa3a4100
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -34,7 +35,8 @@ requirements:
     - pytest
     - typing_extensions
     - python ${{ python_min }}.*
-    - dagster ==1.10.6
+    - dagster == {{ version }}
+    - dagster-shared=={{ dagster_library_version }}
     - packaging >=20.9
     - questionary
     - requests
