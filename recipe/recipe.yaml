@@ -34,7 +34,7 @@ requirements:
     - pydantic
     - pytest
     - typing_extensions
-    - python >= ${{ python_min }}.*
+    - python ${{ python_min }}.*
     - dagster == ${{ version }}
     - dagster-shared==${{ dagster_library_version }}
     - packaging >=20.9
