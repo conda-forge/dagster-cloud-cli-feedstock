@@ -1,9 +1,9 @@
 schema_version: 1
 
 context:
-  python_min: 3.9
+  python_min: '3.9'
   name: dagster-cloud-cli
-  version: 1.10.7
+  version: "1.10.8"
   dagster_library_version: 0.26.7
 
 package:
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: f11ef445ab0583835afb6f2d9d8fc5fb0768c6970a8b182bdac7c513fa3a4100
+  sha256: f226f990ff540c23462562f1c1a7f91446114fdfc2dc078c06a0fdc9ba1814e2
 
 build:
   number: 0
