@@ -14,7 +14,7 @@ source:
   sha256: 07f3778b39942877ada4a240366989d7d92c763af644aaf7b2c6e5123f6f8fec
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -33,7 +33,7 @@ requirements:
     - pydantic
     - pytest
     - typing_extensions
-    - python ${{ python_min }}.*
+    - python >=${{ python_min }}
     - dagster == ${{ version }}
     - dagster-shared
     - packaging >=20.9
