@@ -3,7 +3,7 @@ schema_version: 1
 context:
   python_min: '3.9'
   name: dagster-cloud-cli
-  version: "1.10.10"
+  version: "1.10.19"
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 07f3778b39942877ada4a240366989d7d92c763af644aaf7b2c6e5123f6f8fec
+  sha256: 9728dae7e623d79cc54cc7377a14459b3e1d421b41547da878d1389658387cfb
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
